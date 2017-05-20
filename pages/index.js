@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import PieChart from './Chart'
 import Controls from './Controls'
+import data from '../data'
+
 
 export default class Hello extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      userData: {},
-      actualData: {},
-    }
+    this.state = data
   }
 
   render() {
@@ -25,8 +24,9 @@ export default class Hello extends Component {
     `}</style>
         <link href='https://fonts.googleapis.com/css?family=Khula' rel='stylesheet' />
         <div>Chart ... </div>
-        <PieChart />
-        <Controls />
+        <PieChart data={this.state.userData} />
+        <PieChart data={this.state.us2015} />
+        <Controls data={this.state.userData} />
       </div>
     )
   }
