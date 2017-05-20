@@ -50,8 +50,8 @@ const us2015 = [
 const userData = [
   {
     name: 'Military',
-    id: 'Military',
-    value: 10,
+    id: 'mil',
+    value: 40,
   },
   {
     name: 'Government',

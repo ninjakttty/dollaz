@@ -1,14 +1,12 @@
 import React from 'react'
 
 export default (props) => {
-  const { data } = props
-
+  const { add5, sub5 } = props
   return (
     <div>
-    <div>controls</div>
-    <div>add 5</div>
-    <div>sub 5</div>
-
-  </div>
+      <div>controls</div>
+      <div onClick={add5}>add 5</div>
+      <div onClick={sub5}>sub 5</div>
+    </div>
   )
 }
