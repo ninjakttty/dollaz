@@ -1,55 +1,55 @@
 import { PieChart, Pie, Sector, Cell, Tooltip } from 'recharts';
 const data = [
   {
-    name: "miltary",
-    id: "miltary",
+    name: "Military",
+    id: "Military",
+    value: 30,
+  },
+  {
+    name: "Government",
+    id: "Government",
     value: 10,
   },
   {
-    name: "goverment",
-    id: "goverment",
+    name: "Education",
+    id: "Education",
     value: 10,
   },
   {
-    name: "education",
-    id: "education",
+    name: "Veterans Benefits",
+    id: "Veterans Benefits",
     value: 10,
   },
   {
-    name: "vertans beefits",
-    id: "vertans beefits",
+    name: "Medicare",
+    id: "Medicare",
     value: 10,
   },
   {
-    name: "medicar",
-    id: "medicar",
+    name: "Housing",
+    id: "Housing",
     value: 10,
   },
   {
-    name: "housing",
-    id: "housing",
+    name: "Energy & Environment",
+    id: "Energy & Environment",
     value: 10,
   },
   {
-    name: "engery & enviroment",
-    id: "engery & enviroment",
+    name: "Social Security",
+    id: "Social Security",
     value: 10,
   },
   {
-    name: "social secuirty",
-    id: "social secuirty",
-    value: 10,
-  },
-  {
-    name: "transportaton",
-    id: "transportaton",
+    name: "Transportation",
+    id: "Transportation",
     value: 10,
   },
 
 ];
 
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = ['#26294A', '#01545A','#017351','#03C383','#AAD962','#FBBF45','#EF6A32','#ED0345','#A12A5E','#710162'];
 
 
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -57,7 +57,6 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
  	const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x  = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy  + radius * Math.sin(-midAngle * RADIAN);
-console.log('cx, cy, midAngle, innerRadius, outerRadius, percent, index ', cx, cy, midAngle, innerRadius, outerRadius, percent, index );
 
   return (
     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} 	dominantBaseline="central">
@@ -114,14 +113,14 @@ export default () => (
       }
     `}</style>
 
-    <PieChart width={800} height={400} >
+    <PieChart width={1200} height={1200} >
       <Tooltip content={<CustomTooltip/>}/>
       <Pie
         data={data}
         cx={300}
         cy={200}
         labelLine={false}
-        outerRadius={80}
+        outerRadius={200}
         fill="#8884d8"
         label={renderCustomizedLabel}
       >
